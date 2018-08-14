@@ -1,0 +1,97 @@
+@charset "utf-8";
+html {
+    font-size: 14px;
+    background-color: #f4f5f7;
+}
+
+// 输入框样式
+.input-wrapper {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .input-label {
+        display: inline-block;
+        width: 80px;
+        text-align: right;
+        vertical-align: middle;
+        font-size: 14px;
+        color: $default-input-txt;
+        line-height: 40px;
+        padding: 0 12px 0 0;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+    .input-control-wrapper {
+        position: relative;
+        display: inline-block;
+        input {
+            -webkit-appearance: none;
+            background-color: #fff;
+            background-image: none;
+            border-radius: 4px;
+            border: 1px solid $default-border;
+            box-sizing: border-box;
+            color: $default-input-txt;
+            display: inline-block;
+            font-size: inherit;
+            height: 40px;
+            line-height: 40px;
+            outline: none;
+            padding: 0 15px;
+            transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+            width: 100%;
+            &:focus {
+                outline: none;
+                border-color: $default-focus-border;
+            }
+            &:hover {
+                border-color: $default-hover-border;
+            }
+        }
+        .error-tip {
+            position: absolute;
+            color: $default-warning-txt;
+            font-size: 12px;
+        }
+    }
+}
+
+// 通用按钮样式
+.primary-btn {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid $default-border;
+    border-color: $default-border;
+    color: $default-input-txt;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: $default-focus-border;
+    border-color: $default-focus-border;
+    &:active {
+        background: $default-primary-btn-active;
+        border-color: $default-primary-btn-active;
+        color: #fff;
+        outline: none;
+    }
+    &:focus,
+    &:hover {
+        background: $default-primary-btn-hover;
+        border-color: $default-primary-btn-hover;
+        color: #fff;
+    }
+}
